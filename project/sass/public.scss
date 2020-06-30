@@ -1,0 +1,24 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,dl,dd,fieldset,input,option,textarea,td{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#747474;
+    &:hover{
+        color:#4e93d7;
+    }
+}
+ul,li{
+    list-style: none;
+}
+img{
+    border: none;
+}
+html,body{
+    color:#747474;
+}

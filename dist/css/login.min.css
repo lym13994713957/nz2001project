@@ -1,0 +1,98 @@
+@charset "UTF-8";
+header {
+  width: 1196px;
+  height: 90px;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden; }
+  header .logo {
+    position: absolute;
+    left: 10px;
+    top: 30px; }
+    header .logo img {
+      display: block;
+      width: 160px;
+      height: 47px; }
+  header .hea-r {
+    color: gray;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 10px; }
+
+/* 登录背景 */
+.login-B {
+  width: 100%;
+  height: 483px;
+  background: url(../img/login/beijing.jpg) no-repeat center; }
+  .login-B .login-box {
+    width: 1196px;
+    height: 483px;
+    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; }
+    .login-B .login-box .login-box-form {
+      width: 430px;
+      height: 460px;
+      float: right;
+      margin: 10px 10px;
+      background-color: white;
+      position: relative; }
+      .login-B .login-box .login-box-form .login-tab {
+        width: 380px;
+        height: 420px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; }
+        .login-B .login-box .login-box-form .login-tab .login-tab-top {
+          margin-top: 15px;
+          width: 380px;
+          overflow: hidden;
+          line-height: 40px;
+          font-size: 18px; }
+        .login-B .login-box .login-box-form .login-tab .input-group {
+          margin: 10px 0; }
+          .login-B .login-box .login-box-form .login-tab .input-group label {
+            font-weight: normal; }
+        .login-B .login-box .login-box-form .login-tab .msg {
+          display: block;
+          height: 16px;
+          font-size: 12px; }
+        .login-B .login-box .login-box-form .login-tab .login-tab-bot {
+          position: absolute;
+          width: 100%;
+          bottom: 15px;
+          height: 80px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center; }
+          .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-cen {
+            font-size: 12px;
+            color: gray; }
+          .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot {
+            display: flex;
+            justify-content: space-around; }
+            .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot a {
+              width: 34px;
+              height: 34px;
+              border-radius: 50%;
+              background: url(../img/login/regi_more.png); }
+            .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot .bt1 {
+              background-position: 1px 0; }
+            .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot .bt2 {
+              background-position: -46px 0; }
+            .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot .bt3 {
+              background-position: -88px 0; }
+            .login-B .login-box .login-box-form .login-tab .login-tab-bot .login-tab-bot-bot .bt4 {
+              background-position: -134px 0; }

@@ -1,0 +1,107 @@
+{
+  "id": "1717003",
+  "name": "nz1902",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "553323",
+      "name": "姓名 用户名 昵称",
+      "font_class": "user",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "827646",
+      "name": "密码",
+      "font_class": "password",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "859294",
+      "name": "手机号",
+      "font_class": "phone",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    },
+    {
+      "icon_id": "4361001",
+      "name": "邮箱",
+      "font_class": "email",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1315189",
+      "name": "左箭头",
+      "font_class": "zuojiantou-01",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "9673157",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "886993",
+      "name": "右箭头",
+      "font_class": "right",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1110411",
+      "name": "下箭头",
+      "font_class": "bottom",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "1127404",
+      "name": "下箭头",
+      "font_class": "downarrow",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "1212341",
+      "name": "双下箭头",
+      "font_class": "dbbottom",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "4439862",
+      "name": "系统繁忙",
+      "font_class": "warning",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "5979970",
+      "name": "双上箭头-01",
+      "font_class": "dbtop",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "6299338",
+      "name": "列表",
+      "font_class": "list",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "8361786",
+      "name": "购物车",
+      "font_class": "shopping",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    }
+  ]
+}

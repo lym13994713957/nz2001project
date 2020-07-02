@@ -1,0 +1,177 @@
+/* 头部 */
+header{
+    width:100%;
+    /* 头部的顶部*/
+    .head-t{
+        width:100%;
+        height:34px;
+        background-color: black;
+        position: relative;
+        /* 头部上面中间 */
+        .head-t-con{
+            width:1200px;
+            height:34px;
+            font-size: 12px;
+            margin:0 auto;
+            color:white;
+            line-height:34px;
+            a{
+                color:white;
+                &:hover{
+                    color:#2884c7;
+                    text-decoration: none;
+                }
+            }
+            .head-t-con-le {
+                li{
+                    float: left;
+                    margin-right:20px;
+                }
+            }
+            .head-t-con-ri{
+                height:34px;
+                >li{
+                    float: left;
+                    padding:0 7px;
+                    position: relative;
+                    span{
+                        font-size:10px;
+                        margin:0 4px;
+                    }
+                    &:hover{
+                        background-color: white;
+                        a{
+                            color:black;
+                        }
+                        ul{
+                            display: block;
+                        }
+                    }
+                    a{
+                        &:hover{
+                            color:#2884c7;
+                        }
+                    }
+                    ul{
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                    }
+                    .xz{
+                        left:-156px;
+                        top:36px;
+                        li{
+                        float: left;
+                        text-align: center;
+                            p{
+                                color:black;
+                            }
+                        } 
+                    }
+                }
+                
+            }
+        }
+    }
+    /*头部中间*/
+    .head-cen{
+        width:1200px;
+        display: flex;
+        height:120px;
+        margin:0 auto;
+        justify-content: space-between;
+        align-items: center;    
+        .head-cen-l{
+            img{
+                width:150px;
+                height:60px;
+            }
+        }
+        .head-cen-cen{
+            display: block;
+            input{
+                width:465px;
+                height:38px;
+                border:1px solid #2884c7;
+            }
+            button{
+                height:38px;
+                width:140px;
+            }
+        }
+        .head-cen-r{
+            width:166px;
+            height:38px;
+            border:1px solid black;
+            text-align: center;
+            line-height:38px;
+            &:hover{
+                color:white;
+                border:1px solid #2884c7;
+                background-color: #2884c7;
+            }
+            span{
+                margin-right:10px;
+            }
+        }
+    }
+    /*头部的底部*/
+    .head-bot{
+        width:1200px;
+        height:36px;
+        margin:0 auto;
+        line-height:36px;
+        .category{
+            width:200px;
+            h2{
+                line-height:36px;
+                height:36px;
+                font-size:20px;
+                background-color: black;
+                color:white;
+                span{
+                    margin-right:10px;
+                }
+                &:hover{
+                    .category-option{
+                        display: block;
+                    }
+                }
+            }
+            .category-option{
+                display: block;
+                .cat-item{
+                    height:54px;
+                    line-height: 54px;
+                    &:hover{
+                        background-color: #2884c7;
+                        .txt span{
+                            transform: scale(1.5);
+                        }
+                    }
+                    .txt{
+                    position: absolute;
+                    display: flex;
+                    width:160px;
+                    margin:0 20px;
+                    justify-content: space-between;
+                        span{
+                            transition: all .2s;
+                        }
+                    }
+                }
+                img{
+                    width:75px;
+                    height:75px;
+                }
+            }
+            
+        }
+        .navigator{
+            a {
+                padding:0 5px;
+                font-size:20px;
+            }
+        }
+    }
+}

@@ -127,10 +127,6 @@ exports.clean = cleanFn;
 //首页的拷贝
 function indexFn(){
     return gulp.src("./src/index.html")
-        .pipe(htmlmin({
-            removeEmptyAttributes:true,
-            collapseWhitespace:true
-        }))
         .pipe(gulp.dest("./dist"));
 }
 exports.index = indexFn;

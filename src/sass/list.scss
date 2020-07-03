@@ -1,0 +1,104 @@
+@import "public.scss";
+
+.main-t{
+    background-color: #fff;
+    border-top:2px solid black;
+}
+section{
+    width:1200px;
+    margin:0 auto;
+}
+.sear-t{
+    height:44px;
+    line-height:44px;
+    font-size:14px;
+    :first-child{
+        margin-left:15px;
+    }
+    span{
+        margin:0 5px ;
+    }
+}
+.sear-c{
+    height:32px;
+    padding:10px 0;
+    box-sizing: content-box;
+    background-color: #f9f9f9;
+    color:black;
+    font-size:12px;
+    display: flex;
+    span{
+        height:32px;
+        line-height: 32px;
+        padding:0 25px;
+    }
+    p{
+        border:2px solid #e9e9e9;
+        margin:0 20px;
+        display: flex;
+        background-color: white;
+        align-items: center;
+        i{
+            font-style:normal;
+            width:29px;
+            height:100%;
+            line-height: 29px;
+            font-size: 10px;
+            cursor: pointer;
+            text-align: center;
+            &:hover{
+                background-color: #f2f2f2;
+            }
+        }
+        &:hover{
+            border-color:#ed1c24;
+            span{
+                color:#2884c7;
+            }
+            i{
+                color:#ed1c24;
+            }
+        }
+    }
+    
+}
+.sear-b{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:20px;
+}
+.sear-b-l{
+    display: flex;
+    li{
+        width:100px;
+        text-align: center;
+        font-size: 12px;
+        height:20px;
+        border-right: 1px solid #969696;
+    }
+    span{
+        font-size:12px;
+    }
+    :last-child{
+        border-right:none;
+    }
+    .active{
+        color:#ed1c24;
+    }
+}
+.sear-b-r{
+    font-size:12px;
+    color:black;
+    span{
+        margin:0 10px;
+        font-size: 12px;
+    }
+    .icon-right{
+        font-size:14px;
+    }
+    b{
+        font-weight: normal;
+        color:#ed1c24;
+    }
+}

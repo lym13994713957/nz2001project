@@ -5,7 +5,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const htmlmin = require("gulp-htmlmin");
-const webserver = require("gulp-webserver");
+// const webserver = require("gulp-webserver");
 const clean = require("gulp-clean");
 const sass = require("gulp-sass-china");
 const rename = require('gulp-rename');
@@ -92,6 +92,16 @@ function watchHtmlFn(){
 }
 module.exports.watchHtml = watchHtmlFn;
 
+//定义json数据的拷贝
+function dataFn(){
+    return gulp.src("./src/data/*")
+        .pipe(gulp.dest("./dist/data"));
+}
+
+// 监听json数据
+function watchDataFn(){
+    return gulp.watch("./src/data/*",dataFn);
+}
 //压缩图片
 function imgFn(){
     return gulp.src('src/img/**/*')
@@ -138,23 +148,24 @@ function watchAllFn(next){
     gulp.watch("./src/index.html",indexFn);
     gulp.watch("./src/sass/**/*",sassFn);
     gulp.watch('./src/img/**/*',imgFn);
+    gulp.watch("./src/data/*",dataFn);
     next();
 }
 //暴露指令
 exports.watchAll = watchAllFn;
 
 // 定义服务器功能
-function serverFn(){
-    return gulp.src("./dist")
-        .pipe(webserver({
-            host:"localhost",
-            port:"2000",
-            livereload:true,
-            open:"./index.html",
-        }))
-}
+// function serverFn(){
+//     return gulp.src("./dist")
+//         .pipe(webserver({
+//             host:"localhost",
+//             port:"2000",
+//             livereload:true,
+//             open:"./index.html",
+//         }))
+// }
 // 暴露指令
-exports.server = serverFn;
+// exports.server = serverFn;
 
 // 根据当前项目的实际情况，定义对应的处理指令，决定批量执行的处理指令
 exports.htmlJsCssStatic = gulp.parallel(htmlFn,jsFn,cssFn,indexFn);
@@ -162,7 +173,7 @@ exports.htmlJsCssStatic = gulp.parallel(htmlFn,jsFn,cssFn,indexFn);
 exports.p = gulp.series(gulp.parallel(indexFn,sassFn),watchPartFn);
 // 终极打包：先执行打包的文件处理，然后再开启监听和服务器
 exports.all = gulp.series(
-        gulp.parallel(htmlFn,jsFn,cssFn,indexFn,sassFn,libFn,imgFn),
-        gulp.parallel(watchAllFn,serverFn)
+        gulp.parallel(htmlFn,jsFn,cssFn,indexFn,sassFn,libFn,imgFn,dataFn),
+        gulp.parallel(watchAllFn)
 );
 

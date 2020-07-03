@@ -1,0 +1,49 @@
+[
+    {
+        "type":"area",
+        "mess":[{
+            "title":"9.9元超值专区",
+            "smalltit":"限时抢购",
+            "titri":["更多选择 >"],
+            "name":"楼兰蜜语 枣若羌灰枣",
+            "Nprice":"9.9",
+            "Yprice":"19.9",
+            "sm":"9.9包邮  限时抢购",
+            "listleImg":"img/area-le1.jpg",
+            "listriImg":["img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg","img/area-ri1.jpg"]        
+        },{
+            "title":"618均价专场",
+            "smalltit":"低至五折",
+            "titri":["更多选择 >"],
+            "name":"德国贝儿去吸黑头仪",
+            "Nprice":"61.8",
+            "Yprice":"89",
+            "sm":"不知道写什么了",
+            "listleImg":"img/area-le2.jpg",
+            "listriImg":["img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg","img/area-ri2.jpg"]        
+        },{
+            "title":"精选配件",
+            "smalltit":"让美好生活更多彩",
+            "titri":["游戏娱乐","底座","挂架","屏霸","更多选择 >"],
+            "name":"公牛（BULL）环球旅行USB转换器",
+            "Nprice":"149",
+            "Yprice":"199",
+            "sm":"免工具安装设计 | 安全稳固灵活方便",
+            "listleImg":"img/area-le3.jpg",
+            "listriImg":["img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg","img/area-ri3.jpg"]     
+        }]
+    },{
+        "type":"area-sec",
+        "mess":{
+            "title":"超级电视",
+            "smalltit":"运营家庭美好生活",
+            "name":"超级电视Y32",
+            "Nprice":"579",
+            "Yprice":"699",
+            "sm":"小厅智能追剧神器 | 送靓彩保温杯",
+            "titri":["40吋","50时","55时","65时","更多选择 >"],
+            "listBigImg":"img/area-sec.jpg",
+            "listliImg":["img/area-sec-li.jpg","img/area-sec-li.jpg","img/area-sec-li.jpg","img/area-sec-li.jpg","img/area-sec-li.jpg","img/area-sec-li.jpg"]   
+        }
+    }
+]

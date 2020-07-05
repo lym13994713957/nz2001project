@@ -144,6 +144,7 @@ header{
             border:1px solid black;
             text-align: center;
             line-height:38px;
+            color:#2884c7;
             &:hover{
                 color:white;
                 border:1px solid #2884c7;
@@ -224,6 +225,7 @@ header{
 footer{
     background-color: black;
     overflow: hidden;
+    width:100%;
     .fot-top{
         width:100%;
         background-color: #f2f2f2;
@@ -353,6 +355,7 @@ footer{
             background-color: white;
             font-size:12px;
             white-space: nowrap;    
+            z-index:100;
             a{
                 display: inline-block;
                 background: url("../img/icons.png");

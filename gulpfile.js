@@ -31,6 +31,7 @@ module.exports.watchCss = watchCssFn;
 function sassFn(){
     return gulp.src("./src/sass/**/*")
             .pipe(sass())
+            .pipe(cssmin())
             .pipe(rename({suffix : '.min'}))
             .pipe(gulp.dest("./dist/css"));
 }

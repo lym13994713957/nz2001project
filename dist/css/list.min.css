@@ -112,7 +112,8 @@ header {
       height: 38px;
       border: 1px solid black;
       text-align: center;
-      line-height: 38px; }
+      line-height: 38px;
+      color: #2884c7; }
       header .head-cen .head-cen-r:hover {
         color: white;
         border: 1px solid #2884c7;
@@ -165,7 +166,8 @@ header {
 /*底部*/
 footer {
   background-color: black;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
   footer .fot-top {
     width: 100%;
     background-color: #f2f2f2; }
@@ -271,7 +273,8 @@ footer {
       padding-left: 10px;
       background-color: white;
       font-size: 12px;
-      white-space: nowrap; }
+      white-space: nowrap;
+      z-index: 100; }
       .yxnav li b a {
         display: inline-block;
         background: url("../img/icons.png");
@@ -308,9 +311,13 @@ footer {
   cursor: pointer;
   display: none; }
 
+main {
+  background-color: #f5f5f5; }
+
 .main-t {
   background-color: #fff;
-  border-top: 2px solid black; }
+  border-top: 2px solid black;
+  border-bottom: 1px solid #969696; }
 
 section {
   width: 1200px;
@@ -392,3 +399,107 @@ section {
   .sear-b-r b {
     font-weight: normal;
     color: #ed1c24; }
+
+.main-b {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden; }
+  .main-b ul {
+    display: flex;
+    flex-wrap: wrap; }
+  .main-b .pro-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .main-b .pro-list li {
+      width: 228px;
+      padding-top: 36px;
+      background-color: white;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid white;
+      box-sizing: border-box;
+      margin: 0 5px 10px; }
+      .main-b .pro-list li:hover {
+        border: 1px solid #ed1c24; }
+        .main-b .pro-list li:hover .buy {
+          background-color: #ed1c24;
+          color: white;
+          border-top: white; }
+      .main-b .pro-list li img {
+        width: 180px;
+        height: 180px; }
+      .main-b .pro-list li .pro-name {
+        height: 36px;
+        line-height: 18px;
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        outline: none;
+        color: black;
+        padding-left: 23px;
+        padding-right: 23px;
+        margin-top: 15px;
+        position: relative; }
+        .main-b .pro-list li .pro-name:hover {
+          color: #2884c7; }
+        .main-b .pro-list li .pro-name em {
+          padding: 8px;
+          position: absolute;
+          left: 0;
+          bottom: 36px;
+          background: rgba(0, 0, 0, 0.6);
+          font-style: normal; }
+      .main-b .pro-list li .price {
+        color: #ed1c24;
+        text-align: left;
+        font-size: 14px;
+        padding-left: 23px; }
+      .main-b .pro-list li .score {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-right: 23px;
+        padding-left: 23px; }
+      .main-b .pro-list li i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../img/list/star.png);
+        background-position: 0 -16px; }
+      .main-b .pro-list li .star-light {
+        background-position: 0 0; }
+      .main-b .pro-list li .buy {
+        height: 39px;
+        line-height: 38px;
+        border-top: 1px solid #eee;
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        color: #c80000; }
+  .main-b .page {
+    float: right;
+    margin: 20px 0;
+    font-size: 12px; }
+    .main-b .page .active a {
+      color: black; }
+    .main-b .page li {
+      height: 27px;
+      line-height: 27px;
+      margin: 0 10px; }
+    .main-b .page a {
+      display: inline-block;
+      color: #969696;
+      padding: 0 5px;
+      border: 1px solid #f5f5f5;
+      cursor: default; }
+      .main-b .page a:hover {
+        color: black;
+        border: 1px solid #969696; }
+    .main-b .page .iconfont {
+      font-size: 12px; }
+    .main-b .page .icon-right {
+      font-size: 14px; }

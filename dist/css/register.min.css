@@ -112,7 +112,8 @@ header {
       height: 38px;
       border: 1px solid black;
       text-align: center;
-      line-height: 38px; }
+      line-height: 38px;
+      color: #2884c7; }
       header .head-cen .head-cen-r:hover {
         color: white;
         border: 1px solid #2884c7;
@@ -165,7 +166,8 @@ header {
 /*底部*/
 footer {
   background-color: black;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
   footer .fot-top {
     width: 100%;
     background-color: #f2f2f2; }
@@ -271,7 +273,8 @@ footer {
       padding-left: 10px;
       background-color: white;
       font-size: 12px;
-      white-space: nowrap; }
+      white-space: nowrap;
+      z-index: 100; }
       .yxnav li b a {
         display: inline-block;
         background: url("../img/icons.png");

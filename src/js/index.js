@@ -13,11 +13,11 @@
       clickable: true,
     },
   });
-  $('.swiper-slide').hover((function () {
+  $('.swiper-slide').hover(function () {
     mySwiper.autoplay.stop();
-  }), (function () {
+  }, function () {
     mySwiper.autoplay.start();
-  }))
+  })
   $.getJSON('./data/floor.json', function (data) {
     for (let i = 0; i < data.length; i++) {
       // console.log(data[i]);
@@ -108,4 +108,13 @@
     this.href = 'pages/list.html';
   })
 
+  if(localStorage.getItem("lecart")){
+    let num = 0;
+    let buyArr = JSON.parse(localStorage.getItem("lecart"));
+    buyArr.forEach(val => {
+        // console.log(val);
+        num += val.num;
+    });
+    $(".buynum").html(num);
+  }
 })();

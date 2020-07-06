@@ -145,6 +145,20 @@ section{
     }
     .show-price{
         margin-top:15px;
+        em{
+        height:54px;
+        display: flex;
+        align-items: center;
+        }
+        i{
+            width:16px;
+            height:16px;
+            background: url("../img/list/star.png");
+            background-position: 0 -16px;
+        }
+        .on{
+            background-position: 0 0;
+        }
     }
     .bg{
         background-color: #f9f9f9;
@@ -166,9 +180,6 @@ section{
             display: inline-block;
             margin:0 10px;
             padding-right:5px;
-            border:1px solid #f9f9f9;
-        }
-        .active{
             border:1px solid #d70000;
             color:#f01e00;
         }
@@ -216,10 +227,12 @@ section{
 .tab{
     border-top:1px solid #ececec;
     border-bottom:1px solid #ececec;
-    height:50px;
+    // height:50px;
     box-sizing:content-box;
+    overflow: hidden;
     .tab-tit{
         width:1200px;
+        height:50px;
         margin:0 auto;
         display: flex;
         li{
@@ -233,16 +246,22 @@ section{
             border-bottom:3px solid #f01e00;
         }
     }
-    .tab-list{
-        width:1200px;
-        li{
-            width: 100%;
-            &:first{
-                img{
-                    width:500px;
-                }
-            }
-        }
+}
+.fix{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white
+}
+.tab-list{
+    width:1200px;
+    margin:20px auto;
+    li{
+        width: 100%;
+        display: none;
+    }
+    .active{
+        display: block;
     }
 }
 // 价格说明

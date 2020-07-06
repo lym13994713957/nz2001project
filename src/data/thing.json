@@ -2,7 +2,35 @@
     "id":1,
     "name":"格兰仕（Galanz） 家用电蒸烤箱 台式多功能蒸烤一体机蒸箱 SG26T-D22",
     "Nprice":"2599.00",
-    "score":0,
-    "scoremsg":"暂无评价",
-    "img":["../img/list1-1.jpg"]
+    "imgSrc":["../img/list/list1-1.png","../img/list/list1-2.png","../img/list/list1-3.png","../img/list/list1-4.png"],
+    "format":"加热方式：蒸烤",
+    "msg":["../img/good/1-1.jpg","../img/good/1-2.jpg","../img/good/1-3.jpg","../img/good/1-4.jpg"]
+},{
+    "id":2,
+    "name":"格兰仕（Galanz）微波炉 机械旋钮操作 方便快捷 G70F20N3P-ZS(W0)",
+    "Nprice":"799.00",
+    "imgSrc":["../img/list/list2-1.png","../img/list/list2-2.png","../img/list/list2-3.png","../img/list/list2-4.png"],
+    "format":"颜色：黑色",
+    "msg":["../img/good/2-1.jpg","../img/good/2-2.jpg","../img/good/2-3.jpg"]
+},{
+    "id":3,
+    "name":"格兰仕（Galanz）大容量304不锈钢内胆微波炉 G80F23CSL-C2(S3) 23L",
+    "Nprice":"999.00",
+    "imgSrc":["../img/list/list3-1.jpg","../img/list/list3-2.jpg","../img/list/list3-3.jpg"],
+    "format":"颜色：黑色",
+    "msg":["../img/good/3-1.jpg","../img/good/3-2.jpg","../img/good/3-3.jpg"]
+},{
+    "id":4,
+    "name":"TCL恒芯净水器 TT302",
+    "Nprice":"528.00",
+    "imgSrc":["../img/list/list4-1.jpg","../img/list/list4-2.jpg","../img/list/list4-3.jpg","../img/list/list4-4.jpg"],
+    "format":"TT302",
+    "msg":["../img/good/4-1.jpg","../img/good/4-2.jpg","../img/good/4-3.jpg"]
+},{
+    "id":5,
+    "name":"艾美特 电陶炉 CT2202",
+    "Nprice":"299.00",
+    "imgSrc":["../img/list/list5-1.jpg","../img/list/list5-2.jpg","../img/list/list5-3.jpg","../img/list/list5-4.jpg"],
+    "format":"黑色",
+    "msg":["../img/good/5-1.jpg","../img/good/5-2.jpg","../img/good/5-3.jpg"]
 }]

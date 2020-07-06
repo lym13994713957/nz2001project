@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品详情页</title>
     <link rel="shortcut icon" href="../img/favicon.ico" />
-    <script src="../libs/jquery-1.12.4.min.js"></script>
-
-    <script src="../libs/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/jquery.SuperSlide.2.1.3.min.css">
-    <script src="../libs/jquery.SuperSlide.2.1.3.min.js"></script>
     <link rel="stylesheet" href="../css/iconfont.min.css">
     <link rel="stylesheet" href="../css/detail.min.css">
 </head>
@@ -24,10 +20,13 @@
             <div class="head-t-con">
                 <ul class="head-t-con-le">
                     <li><a href="../index.html">商城首页</a></li>
-                    <li>
+                    <li class="login">
                         <a href="login.html">登录</a>
                         |
                         <a href="register.html">注册</a>
+                    </li>
+                    <li class="loginin">
+                        欢迎<b class="user"></b>登录本网站<span class="exit">注销</span>
                     </li>
                 </ul>
                 <ul class="head-t-con-ri fr">
@@ -66,9 +65,9 @@
                     <button class="btn btn-primary" type="button">搜 索</button>
                 </span>
             </div>
-            <a class="head-cen-r" href="#">
+            <a class="head-cen-r" href="cart.html">
                 <span class="iconfont icon-shopping"></span>
-                购物车
+                购物车(<i class="buynum">0</i>)
             </a>
         </div>
         <!-- 头部的底部 -->
@@ -349,7 +348,7 @@
             <div class="pro-title">
                 <a href="../index.html">首页</a>
                 <span class="iconfont icon-right"></span>
-                <a class="pro-tit" href="#">格兰仕（Galanz） 家用电蒸烤箱 台式多功能蒸烤一体机蒸箱 SG26T-D22 </a>
+                <a class="pro-tit title" href="#"> </a>
             </div>
             <!-- 产品展示区域 -->
             <div class="showpro">
@@ -360,26 +359,17 @@
                         <div class="small-pic">
                             <span class="float-layer"></span>
                             <p class="mark"></p>
-                            <img src="../img/list/list1-1.png" alt="">
+                            <img src="" alt="">
                         </div>
-                        <div class="big-pic"><img src="../img/list/list1-1.png" alt=""></div>
+                        <div class="big-pic"><img src="" alt=""></div>
                     </div>
                     <!-- 小图列表 -->
                     <div class="pro-list">
                         <span class="iconfont icon-zuojiantou-01"></span>
                         <ul class="img-list">
-                            <li>
+                            <!-- <li>
                                 <img src="../img/list/list1-1.png" alt="">
-                            </li>
-                            <li>
-                                <img src="../img/list/list1-2.png" alt="">
-                            </li>
-                            <li>
-                                <img src="../img/list/list1-3.png" alt="">
-                            </li>
-                            <li>
-                                <img src="../img/list/list1-4.png" alt="">
-                            </li>
+                            </li> -->
                         </ul>
                         <span class="iconfont icon-right"></span>
                     </div>
@@ -387,12 +377,23 @@
                 <div class="show-ri">
                     <div class="show-ri-tit">
                         <h4 class="title">
-                            格兰仕（Galanz） 家用电蒸烤箱 台式多功能蒸烤一体机蒸箱 SG26T-D22</h4>
-                        <h5 class="title">格兰仕（Galanz） 家用电蒸烤箱 台式多功能蒸烤一体机蒸箱 SG26T-D22</h5>
+                            </h4>
+                        <h5 class="title"></h5>
                     </div>
                     <dl class="show-price bg">
                         <dt>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</dt>
-                        <dd>￥<b class="price">2599</b></dd>
+                        <dd>￥<b class="price"></b>
+                            <a class="fr" href="#">已有0人评价
+                                <span class="iconfont icon-right"></span>
+                            </a>
+                            <em class="fr">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </em>
+                        </dd>
                     </dl>
                     <dl class="address">
                         <dt>配送区域</dt>
@@ -401,7 +402,7 @@
                     </dl>
                     <dl class="format">
                         <dt>规格</dt>
-                        <dd><span class="active">加热方式：蒸烤</span></dd>
+                        <dd><span class="formated"></span></dd>
                     </dl>
                     <dl class="amount">
                         <dt>数量</dt>
@@ -414,8 +415,8 @@
                     <dl class="total bg">
                         <dt>总计：</dt>
                         <dd>
-                            ￥<b class="tot-money">2599.00</b>
-                            <a href="cart.html" class="buy fr">加入购物车</a>
+                            ￥<b class="tot-money"></b>
+                            <a href="javascript:;" class="buy fr">加入购物车</a>
                         </dd>
                     </dl>
                 </div>
@@ -432,10 +433,14 @@
                 <li>帮助中心</li>
             </ul>
             <!-- 选项卡子区域 -->
-            <ul class="tab-list">
-                <li></li>
-            </ul>
         </div>
+        <ul class="tab-list">
+            <li class="active"></li>
+            <li>这是参数规格</li>
+            <li>这是评价晒单</li>
+            <li>这是售后服务</li>
+            <li>这是帮助中心</li>
+        </ul>
         <!-- 中间的底部 -->
         <section class="jgmsg">
             <dl>
@@ -543,6 +548,11 @@
     <div class="back">
         <span class="iconfont icon-dbtop"></span>
     </div>
+    <script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/bootstrap.min.js"></script>
+<script src="../libs/jquery.SuperSlide.2.1.3.min.js"></script>
+<script src="../libs/jquery.cookie.min.js"></script>
+    <script src="../js/public.min.js"></script>
     <script src="../js/detail.min.js"></script>
 </body>
 

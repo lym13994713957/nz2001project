@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/iconfont.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <script src="libs/swiper.min.js"></script>
+    <script src="libs/jquery.cookie.min.js"></script>
 </head>
 
 <body>
@@ -27,10 +28,13 @@
             <div class="head-t-con">
                 <ul class="head-t-con-le">
                     <li><a href="index.html">商城首页</a></li>
-                    <li>
+                    <li class="login">
                         <a href="pages/login.html">登录</a>
                         |
                         <a href="pages/register.html">注册</a>
+                    </li>
+                    <li class="loginin">
+                        欢迎<b class="user"></b>登录本网站<span class="exit">注销</span>
                     </li>
                 </ul>
                 <ul class="head-t-con-ri fr">
@@ -71,7 +75,7 @@
             </div>
             <a class="head-cen-r" href="pages/cart.html">
                 <span class="iconfont icon-shopping"></span>
-                购物车(0)
+                购物车(<i class="buynum">0</i>)
             </a>
         </div>
         <!-- 头部的底部 -->

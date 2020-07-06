@@ -64,6 +64,16 @@ header{
                     float: left;
                     margin-right:20px;
                 }
+                span,b{
+                    color:red;
+                }
+                span{
+                    margin-left:10px;
+                    cursor: pointer;
+                }
+                .loginin{
+                    display: none;
+                }
             }
             .head-t-con-ri{
                 height:34px;
@@ -152,6 +162,9 @@ header{
             }
             span{
                 margin-right:10px;
+            }
+            .buynum{
+                font-style: normal;
             }
         }
     }

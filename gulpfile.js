@@ -49,10 +49,10 @@ exports.watchSass = watchSassFn;
 // 处理js的指令：ES6编译ES5，压缩
 function jsFn(){
     return gulp.src("./src/js/**/*")
-        .pipe(babel({
-            presets:["@babel/env"]
-        }))
-        .pipe(uglify())
+        // .pipe(babel({
+        //     presets:["@babel/env"]
+        // }))
+        // .pipe(uglify())
         .pipe(rename({suffix : '.min'}))
         .pipe(gulp.dest("./dist/js"))
 }

@@ -47,7 +47,7 @@
                 }
             })
             this.qrpwd.blur(function () {
-                if (that.pwd.val() !== "") {
+                if (that.qrpwd.val() !== "") {
                     if (this.value === that.pwd.val()) {
                         $(this).parent().next().html('符合要求');
                         that.qrpwdOn = true;
@@ -56,32 +56,49 @@
                         that.qrpwdOn = false;
                         $(this).val('');
                     }
+                }else{
+                    $(this).parent().next().html('确认密码不能为空！');
+                        that.qrpwdOn = false;
+                        $(this).val('');
                 }
             })
-            this.sub.click(function () {
-                if (that.userOn && that.pwdOn && that.qrpwdOn) {
-                    if(!that.agr[0].checked){
-                        alert("请先同意协议");
-                        return;
+            $("#mpan").codeVerify({
+                type:1,
+                width:"190px",
+                height:"30px",
+                fontSize:"20px",
+                codeLength:6,
+                btnId : "register",
+                ready :function(){
+                },
+                success:function(){
+                    if (that.userOn && that.pwdOn && that.qrpwdOn) {
+                        if(!that.agr[0].checked){
+                            alert("请先同意协议");
+                            return;
+                        }
+                        let storStr = storage.getItem('register') ? storage.getItem('register') : '';
+                        let storObj = storStr ? JSON.parse(storStr) : {};
+                        if (that.user.val() in storObj) {
+                            alert('用户名已经被注册！')
+                            return;
+                        } else {
+                            storObj[that.user.val()] = that.pwd.val();
+                            storage.setItem('register', JSON.stringify(storObj));
+                            // console.log(this);
+                            that.sub.next().html("注册成功，3秒后跳转到登录页面");
+                            setTimeout(() => {
+                                location.href = 'login.html';
+                            }, 3000);
+                        }
+                    }else{
+                        alert("你还没有注册！");
                     }
-                    let storStr = storage.getItem('register') ? storage.getItem('register') : '';
-                    let storObj = storStr ? JSON.parse(storStr) : {};
-                    if (that.user.val() in storObj) {
-                        alert('用户名已经被注册！')
-                        return;
-                    } else {
-                        console.log(storObj);
-                        storObj[that.user.val()] = that.pwd.val();
-                        storage.setItem('register', JSON.stringify(storObj));
-                        console.log(storObj);
-                        $(this).next().html("注册成功，3秒后跳转到登录页面");
-                        setTimeout(() => {
-                            location.href = 'login.html';
-                        }, 3000)
-                    }
+                },
+                error : function(){
+                    alert("验证码不正确！");
                 }
             })
-
         }
     }
 

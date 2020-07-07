@@ -113,7 +113,7 @@
     let buyArr = JSON.parse(localStorage.getItem("lecart"));
     buyArr.forEach(val => {
         // console.log(val);
-        num += val.num;
+        num += Number(val.num);
     });
     $(".buynum").html(num);
   }

@@ -45,7 +45,45 @@
                         that.pwdOn = false;
                 }
             })
-
+            $("#mpan").codeVerify({
+                type:1,
+                width:"190px",
+                height:"30px",
+                fontSize:"20px",
+                codeLength:6,
+                btnId : "login",
+                ready:function(){},
+                success:function(){
+                    if (that.userOn && that.pwdOn) {
+                        if(that.user.val() in reObj){
+                            if(reObj[that.user.val()] === that.pwd.val()){
+                                let Obj = {
+                                    user:that.user.val()
+                                }
+                                if(that.rem[0].checked){
+                                    // console.log(1);
+                                    $.cookie("login",JSON.stringify(Obj),{expires : 7,path : '/'})
+                                }else{
+                                    $.cookie("login",JSON.stringify(Obj),{path:"/"})
+                                }
+                                that.sub.next().html("登录成功！3秒钟后跳转到首页")
+                                setTimeout(()=>{
+                                    location.href ="../index.html"
+                                },3000)
+                            }else{
+                                alert("密码错误！");
+                                that.pwd.val("");
+                            }
+                        }else{
+                            alert("用户名错误！");
+                            that.user.val("");
+                        }
+                    }
+                },
+                error:function(){
+                    alert("验证码不正确！");
+                }
+            })
             this.sub.click(function () {
                 if (that.userOn && that.pwdOn) {
                     if(that.user.val() in reObj){

@@ -82,6 +82,7 @@
             //数量减少，先判断数量不能小于1，小计减少，总计根据选择情况确认
             this.minus.each((i, val) => {
                 $(val).click(function () {
+                    //判断数量不能小于1
                     if (that.num[i].value == 1) {
                         return;
                     } else {
@@ -110,7 +111,7 @@
                         localStorage.setItem('lecart', JSON.stringify(that.gm));
                         that.toNum -= that.num[i].value;
                         that.checkF();
-                        that.toMoney -= that.tot[i].innerHTML
+                        that.toMoney -= that.tot[i].innerHTML;
                         that.minus = $(".minus");
                         that.plus = $(".plus");
                         that.num = $(".num");
@@ -120,7 +121,6 @@
                     }
                 })
             })
-
             // 清空整个购物车
             this.cleanAll.click(function () {
                 if (confirm("确认要清空整个购物车吗？")) {
@@ -145,7 +145,6 @@
                         that.toMoney += parseFloat(that.gm[j].num * that.gm[j].msg.Nprice);
                     }
                     that.checkF();
-                    that.tmoney.html(that.toMoney.toFixed(2));
                 }
             })
             //单选框的逻辑
@@ -153,6 +152,7 @@
                 $(val).on("click", function () {
                     if (this.checked) {
                         let arr = $.makeArray(that.check);
+                        //every必须所有都为true才返回true
                         let t = arr.every(function (value2) {
                             return value2.checked;
                         })
@@ -162,15 +162,38 @@
                         that.toNum += Number(that.num[i].value);
                         that.toMoney += parseFloat(that.tot[i].innerHTML);
                         that.checkF();
-                        that.tmoney.html(that.toMoney.toFixed(2));
                     } else {
                         that.checkAll[0].checked = false;
                         that.toNum -= that.num[i].value;
                         that.toMoney -= that.tot[i].innerHTML;
                         that.checkF();
-                        that.tmoney.html(that.toMoney.toFixed(2));
                     }
                 });
+            })
+            //输入框变化事件
+            this.num.each((i,val)=>{
+                $(val).change(function(){
+                    if(isNaN(this.value) || this.value < 1){
+                        this.value = 1;
+                    }
+                    //后面的小计一定变，本地存储一定变，总计根据是否选中变
+                    $(that.tot[i]).html(function(){
+                        return (that.gm[i].msg.Nprice * that.num[i].value).toFixed(2);
+                    })
+                    that.gm[i].num = this.value;
+                    localStorage.setItem("lecart",JSON.stringify(that.gm));
+                    //判断是否被选中
+                    if(that.check[i].checked){
+                        that.toNum = that.toMoney = 0;
+                        that.check.each((j,value)=>{
+                            if(that.check[j].checked){
+                                that.toNum += Number(that.num[j].value);
+                                that.toMoney += Number(that.tot[j].innerHTML);
+                                that.checkF();
+                            }
+                        })
+                    }
+                })
             })
         }
         checkF() {

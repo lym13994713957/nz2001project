@@ -8,9 +8,8 @@
     <link rel="shortcut icon" href="../img/favicon.ico" />
     <link rel="stylesheet" href="../css/register.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script src="../libs/jquery-1.12.4.min.js"></script>
-    <script src="../libs/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/iconfont.min.css">
+    <link rel="stylesheet" href="../css/verify.min.css">
 </head>
 
 <body>
@@ -62,9 +61,11 @@
                             aria-describedby="basic-addon1">
                     </div>
                     <span class="msg"></span>
+                    <!-- 验证码 -->
+                    <div id="mpan"></div>
                     <input type="checkbox"  id="agr">
                     <label for="agr">我已阅读并同意<a href="#">乐视用户协议</a></label>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="register">注   册</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="register" class="verify-btn">注   册</button>
                     <span></span>
                     </div>
                 </div>
@@ -72,5 +73,8 @@
         </div>
     </section>
 </body>
+<script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/bootstrap.min.js"></script>
+<script src="../libs/verify.min.js"></script>
 <script src="../js/register.min.js"></script>
 </html>

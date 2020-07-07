@@ -72,11 +72,8 @@ header{
                         font-weight:normal;
                     }
                 }
-                .msg{
-                    display: block;
-                    height:16px;
-                    font-size:14px;
-                    color:red;
+                #mpan{
+                    margin-top:5px;
                 }
                 .register-tab-bot{
                     position: absolute;
@@ -88,6 +85,13 @@ header{
                     flex-direction: column;
                     align-items: center;
                 }
+
+            }
+            .msg{
+                display: block;
+                height:16px;
+                font-size:14px;
+                color:red;
             }
         }
     }

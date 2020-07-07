@@ -8,8 +8,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" />
     <link rel="stylesheet" href="../css/login.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script src="../libs/jquery-1.12.4.min.js"></script>
-    <script src="../libs/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/verify.min.css">
     <link rel="stylesheet" href="../css/iconfont.min.css">
 </head>
 
@@ -40,9 +39,9 @@
                 <div class="login-tab">
                     <div class="login-tab-top">
                         <p class="fl"><b>登录</b></p>
-                        <a href="#" class="fr">
+                        <!-- <a href="#" class="fr">
                             <span class="iconfont icon-phone"></span>短信验证码登录
-                        </a>
+                        </a> -->
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon iconfont icon-user" id="basic-addon1"></span>
@@ -56,6 +55,7 @@
                             aria-describedby="basic-addon1">
                     </div>
                     <span class="msg"></span>
+                    <div id="mpan"></div>
                     <input type="checkbox"  id="rember">
                     <label for="rember">登录状态保存7天</label>
                     <a class="fr" href="#">重置密码</a>
@@ -83,6 +83,9 @@
         </div>
     </section>
 </body>
+<script src="../libs/jquery-1.12.4.min.js"></script>
+<script src="../libs/bootstrap.min.js"></script>
 <script src="../libs/jquery.cookie.min.js"></script>
+<script src="../libs/verify.min.js"></script>
 <script src="../js/login.min.js"></script>
 </html>

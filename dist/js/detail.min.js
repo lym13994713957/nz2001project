@@ -81,12 +81,13 @@
         }
         load() {
             let that = this;
+            // 初始化购物车数据
             if(localStorage.getItem("lecart")){
                 let num = 0;
                 let buyArr = JSON.parse(localStorage.getItem("lecart"));
                 buyArr.forEach(val => {
                     // console.log(val);
-                    num += val.num;
+                    num += Number(val.num);
                 });
                 $(".buynum").html(num);
               }
@@ -175,17 +176,17 @@
                 }];
             }else{
                 // 先判断，这次点的，在老数据中有没有
-                var zhuangtai = 0;
+                let t = 0;
                 for(var i=0;i<gm.length;i++){
-                    // 1-2-1.有：数量+1
+                    // 有：数量+1
                     if(gm[i].goodsId === this.id){
                         gm[i].num = parseInt(gm[i].num) + parseInt(this.num.val());
-                        zhuangtai = 1;
+                        t = 1;
                         break;
                     }
                 }
-                if(zhuangtai == 0){
-                    // 1-2-2.没有：给数组，新增一个数据
+                if(t == 0){
+                    //没有：给数组，新增一个数据
                     gm.push({
                         goodsId:this.id,
                         num:this.num.val(),
@@ -194,6 +195,16 @@
                 }
             }
             storage.setItem("lecart",JSON.stringify(gm));
+            let num = 0;
+            for(let i =0;i<gm.length;i++){
+                num += Number(gm[i].num);
+            }
+            
+            $(".buynum").html(num);
+            if(confirm("已加入购物车，是否前往购物车查看")){
+                location.href = "cart.html";
+            }
+
         }
     }
 

@@ -29,4 +29,5 @@
             $.cookie("login","",{expires:-1,path:"/"})
         })
     }
+    
 })();

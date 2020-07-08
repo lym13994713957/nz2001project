@@ -211,5 +211,15 @@
     $(".category a").each(function () {
         this.href = 'list.html';
       })
+
+      $(".cart").click(function () {
+        if (!$.cookie("login")) {
+          if (confirm("你还没有登录，请先登录，是否跳转到登录页面")) {
+            location.href = "login.html";
+          }
+        }else{
+          location.href = "cart.html";
+        }
+      })
     new Detail();
 })();

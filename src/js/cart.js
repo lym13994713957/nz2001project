@@ -44,7 +44,9 @@
                     this.toNum += Number(this.gm[i].num);
                     this.toMoney += this.gm[i].num * this.gm[i].msg.Nprice;
                 }
+                //初始化总计数量和价格
                 this.checkF();
+                //获取元素
                 this.getEle();
             }
         }
@@ -201,6 +203,13 @@
             this.tmoney.html(this.toMoney.toFixed(2));
         }
     }
-
-    new Cart();
+    $(function(){
+        if(!$.cookie("login")){
+            alert("你还没有登录！快去登录！");
+            location.href="login.html";
+        }else{
+            new Cart();
+        }
+    })
+    
 })();

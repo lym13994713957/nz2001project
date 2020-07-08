@@ -1,18 +1,18 @@
-;(function(){
-    class Login{
-        constructor(){
+; (function () {
+    class Login {
+        constructor() {
             this.user = $("#user");
             this.pwd = $("#pwd");
             this.sub = $("#login");
-            this.rem =  $("#rember");
+            this.rem = $("#rember");
             this.userOn = this.pwdOn = false;
             //添加事件
             this.addEvent();
         }
-        addEvent(){
+        addEvent() {
             let that = this;
             // 注册表
-            let reObj  = localStorage.getItem('register') ? JSON.parse(localStorage.getItem('register')) : {};
+            let reObj = localStorage.getItem('register') ? JSON.parse(localStorage.getItem('register')) : {};
             this.user.blur(function () {
                 if (this.value !== "") {
                     let reg = /^[\w\-]{4,20}$/;
@@ -40,90 +40,90 @@
                         that.pwdOn = false;
                         $(this).val("");
                     }
-                }else{
+                } else {
                     $(this).parent().next().html('密码不能为空');
-                        that.pwdOn = false;
+                    that.pwdOn = false;
                 }
             })
             $("#mpan").codeVerify({
-                type:1,
-                width:"190px",
-                height:"30px",
-                fontSize:"20px",
-                codeLength:6,
-                btnId : "login",
-                ready:function(){},
-                success:function(){
+                type: 1,
+                width: "190px",
+                height: "30px",
+                fontSize: "20px",
+                codeLength: 6,
+                btnId: "login",
+                ready: function () { },
+                success: function () {
                     if (that.userOn && that.pwdOn) {
-                        if(that.user.val() in reObj){
-                            if(reObj[that.user.val()] === that.pwd.val()){
+                        if (that.user.val() in reObj) {
+                            if (reObj[that.user.val()] === that.pwd.val()) {
                                 let Obj = {
-                                    user:that.user.val()
+                                    user: that.user.val()
                                 }
-                                if(that.rem[0].checked){
+                                if (that.rem[0].checked) {
                                     // console.log(1);
-                                    $.cookie("login",JSON.stringify(Obj),{expires : 7,path : '/'})
-                                }else{
-                                    $.cookie("login",JSON.stringify(Obj),{path:"/"})
+                                    $.cookie("login", JSON.stringify(Obj), { expires: 7, path: '/' })
+                                } else {
+                                    $.cookie("login", JSON.stringify(Obj), { path: "/" })
                                 }
                                 that.sub.next().html("登录成功！3秒钟后跳转到首页")
-                                setTimeout(()=>{
-                                    location.href ="../index.html"
-                                },3000)
-                            }else{
+                                setTimeout(() => {
+                                    location.href = "../index.html"
+                                }, 3000)
+                            } else {
                                 alert("密码错误！");
                                 that.pwd.val("");
                             }
-                        }else{
+                        } else {
                             alert("用户名错误！");
                             that.user.val("");
                         }
-                    }else{
-                        if (!that.userOn){
+                    } else {
+                        if (!that.userOn) {
                             alert("用户名不正确！");
                         }
-                        if (!that.pwdOn){
+                        if (!that.pwdOn) {
                             alert("密码不正确！");
                         }
                     }
                 },
-                error:function(){
+                error: function () {
                     alert("验证码不正确！");
-                    if (!that.userOn){
+                    if (!that.userOn) {
                         alert("用户名不正确！");
                     }
-                    if (!that.pwdOn){
+                    if (!that.pwdOn) {
                         alert("密码不正确！");
                     }
                 }
             })
-            this.sub.click(function () {
-                if (that.userOn && that.pwdOn) {
-                    if(that.user.val() in reObj){
-                        if(reObj[that.user.val()] === that.pwd.val()){
-                            let Obj = {
-                                user:that.user.val()
-                            }
-                            if(that.rem[0].checked){
-                                // console.log(1);
-                                $.cookie("login",JSON.stringify(Obj),{expires : 7,path : '/'})
-                            }else{
-                                $.cookie("login",JSON.stringify(Obj),{path:"/"})
-                            }
-                            $(this).next().html("登录成功！3秒钟后跳转到首页")
-                            setTimeout(()=>{
-                                location.href ="../index.html"
-                            },3000)
-                        }else{
-                            alert("密码错误！");
-                            that.pwd.val("");
-                        }
-                    }else{
-                        alert("用户名错误！");
-                        that.user.val("");
-                    }
-                }
-            })
+            // this.sub.click(function () {
+            //     if (that.userOn && that.pwdOn) {
+            //         if(that.user.val() in reObj){
+            //             if(reObj[that.user.val()] === that.pwd.val()){
+            //                 let Obj = {
+            //                     user:that.user.val()
+            //                 }
+            //                 if(that.rem[0].checked){
+            //                     // console.log(1);
+            //                     $.cookie("login",JSON.stringify(Obj),{expires : 7,path : '/'})
+            //                 }else{
+            //                     $.cookie("login",JSON.stringify(Obj),{path:"/"})
+            //                 }
+            //                 $(this).next().html("登录成功！3秒钟后跳转到首页")
+            //                 setTimeout(()=>{
+            //                     location.href ="../index.html"
+            //                 },3000)
+            //             }else{
+            //                 alert("密码错误！");
+            //                 that.pwd.val("");
+            //             }
+            //         }else{
+            //             alert("用户名错误！");
+            //             that.user.val("");
+            //         }
+            //     }
+            // })
         }
     }
 

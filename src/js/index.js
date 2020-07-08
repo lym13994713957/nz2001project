@@ -108,13 +108,25 @@
     this.href = 'pages/list.html';
   })
 
-  if(localStorage.getItem("lecart")){
+  if (localStorage.getItem("lecart")) {
     let num = 0;
     let buyArr = JSON.parse(localStorage.getItem("lecart"));
     buyArr.forEach(val => {
-        // console.log(val);
-        num += Number(val.num);
+      // console.log(val);
+      num += Number(val.num);
     });
     $(".buynum").html(num);
+
+
+    $(".cart").click(function () {
+      if (!$.cookie("login")) {
+        if (confirm("你还没有登录，请先登录，是否跳转到登录页面")) {
+          location.href = "pages/login.html";
+        }
+      }else{
+        location.href = "pages/cart.html";
+      }
+    })
+
   }
 })();

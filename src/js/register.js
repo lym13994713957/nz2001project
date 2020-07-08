@@ -92,11 +92,28 @@
                             }, 3000);
                         }
                     }else{
-                        alert("你还没有注册！");
+                        if (!that.userOn){
+                            alert("用户名不正确！");
+                        }
+                        if (!that.pwdOn){
+                            alert("密码不正确！");
+                        }
+                        if (!that.qrpwdOn){
+                            alert("第二次密码和第一次密码不同！");
+                        }
                     }
                 },
                 error : function(){
                     alert("验证码不正确！");
+                    if (!that.userOn){
+                        alert("用户名不正确！");
+                    }
+                    if (!that.pwdOn){
+                        alert("密码不正确！");
+                    }
+                    if (!that.qrpwdOn){
+                        alert("第二次密码和第一次密码不同！");
+                    }
                 }
             })
         }

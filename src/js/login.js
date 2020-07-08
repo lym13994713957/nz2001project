@@ -78,10 +78,23 @@
                             alert("用户名错误！");
                             that.user.val("");
                         }
+                    }else{
+                        if (!that.userOn){
+                            alert("用户名不正确！");
+                        }
+                        if (!that.pwdOn){
+                            alert("密码不正确！");
+                        }
                     }
                 },
                 error:function(){
                     alert("验证码不正确！");
+                    if (!that.userOn){
+                        alert("用户名不正确！");
+                    }
+                    if (!that.pwdOn){
+                        alert("密码不正确！");
+                    }
                 }
             })
             this.sub.click(function () {

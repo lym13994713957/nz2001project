@@ -5,7 +5,6 @@ const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const htmlmin = require("gulp-htmlmin");
-// const webserver = require("gulp-webserver");
 const clean = require("gulp-clean");
 const sass = require("gulp-sass-china");
 const rename = require('gulp-rename');
@@ -49,10 +48,10 @@ exports.watchSass = watchSassFn;
 // 处理js的指令：ES6编译ES5，压缩
 function jsFn(){
     return gulp.src("./src/js/**/*")
-        // .pipe(babel({
-        //     presets:["@babel/env"]
-        // }))
-        // .pipe(uglify())
+        .pipe(babel({
+            presets:["@babel/env"]
+        }))
+        .pipe(uglify())
         .pipe(rename({suffix : '.min'}))
         .pipe(gulp.dest("./dist/js"))
 }
@@ -151,18 +150,6 @@ function watchAllFn(next){
 //暴露指令
 exports.watchAll = watchAllFn;
 
-// 定义服务器功能
-// function serverFn(){
-//     return gulp.src("./dist")
-//         .pipe(webserver({
-//             host:"localhost",
-//             port:"2000",
-//             livereload:true,
-//             open:"./index.html",
-//         }))
-// }
-// 暴露指令
-// exports.server = serverFn;
 
 // 根据当前项目的实际情况，定义对应的处理指令，决定批量执行的处理指令
 exports.htmlJsCssStatic = gulp.parallel(htmlFn,jsFn,cssFn,indexFn);

@@ -22,7 +22,7 @@
             //数据请求
             $.getJSON("../data/thing.json", function (data) {
                 // console.log(data);
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 3; i++) {
                     for (let j = 0; j < data.length; j++) {
                         $(".pro-list").append(`<li>
                         <a href="detail.html?id=${data[j].id}"><img src=${data[j].imgSrc[0]} alt=""></a>
